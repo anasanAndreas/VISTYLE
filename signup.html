@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="imagex/png" href="img-logo.ico">
+<title>VISTYLE | Sign Up</title>
+<style type="text/css">
+  body{
+  font-family: Arial, sans-serif;
+  font-size: 125%;
+  border: 20px solid transparent;
+  background-color:#000000;
+  color:rgb(255, 255, 255);
+  }
+  
+  .form{
+  background-color: #153959;
+  opacity: 0.8 ;
+  border-radius: 50px;
+  padding: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 20px solid transparent;
+  height: 450px;
+  width: 540px;
+  margin-left: 600px;
+  position: relative;
+  }
+
+  .primeiro{
+  border-radius: 50px;
+  position: relative;
+  width: 570px;
+  height: 610px;
+  }
+
+  .signup{
+  margin-left: 0px; 
+  margin-top: 0px; 
+  position: relative;
+  }
+
+  .cadastro{
+  padding: 8px 10px;
+  width: 540px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: 'SummerDreams';
+  }
+
+  .login{
+  margin-top: 20px;
+  padding: 10px 10px;
+  width: 300px;
+  margin-left: 1px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: 'GoodTiming';
+  }
+
+  .home{
+  margin-top: 20px;
+  padding: 10px 10px;
+  width: 200px;
+  margin-left: 30px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: 'GoodTiming';
+  }
+
+  @font-face{
+  font-family: 'GoodTiming';
+  src: url('gt.ttf') format('truetype');
+  }
+
+  @font-face{
+  font-family: 'SummerDreams';
+  src: url('sd.ttf') format('truetype');
+  }
+
+  auto-type{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'GoodTiming';
+  }
+
+  span{
+  color: #aee1f5;
+  }
+
+  .preencher input{
+  width: 250px;
+  height: 100%;
+  outline: none;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 1px solid #999;
+  }
+
+</style>
+</head>
+
+<body>
+<div style="float: left;">
+  <img class="primeiro" src="produtos/su.jpg"> 
+</div>
+
+<div class="form">
+<div style="float: left;" class="signup">
+  <form method="post">
+  <font style="font-family: GoodTiming;"><b> > crie sua <span class="auto-type"></span></b></font>
+  <br><br>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-type",{
+      strings : ["conta", "jornada", "experiência"],
+      typeSpeed : 150,
+      backSpeed : 150,
+    })
+  </script>
+
+  <div class="preencher">
+  <img src="do-utilizador.png" style="width: 15px;">
+  <input type="text" name="01" size="10" maxlength="30" placeholder="seu nome">
+  <input type="text" name="02" size="14" maxlength="30" placeholder="seu sobrenome">
+  
+  <br><br>
+
+  <img src="megafone.png" style="width: 15px;">
+  <input type="text" name="02" size="14" maxlength="30" placeholder="seu telefone ou email">
+  </div>
+
+  <br>
+  <img src="trancar.png" style="width: 15px;">
+  Crie uma senha:
+  <div class="preencher">
+  <input type="password" name="04" size="8" maxlength="30" placeholder="sua senha">
+  </div>
+  <br>
+  <img src="trancar.png" style="width: 15px;">
+  Confirme:
+  <div class="preencher">
+  <input type="password" name="04" size="8" maxlength="30" placeholder="repita sua senha">
+  </div>
+  <br>
+
+  Gênero:<br>
+  <label><input type="radio" name="33">Feminino</label>
+  <label><input type="radio" name="33"> Masculino</label>
+  <label><input type="radio" name="33"> Personalizado</label>
+  <br><br>
+  </form>
+  <a href="#"><button class="cadastro">confirmar cadastro</button></a>
+  <a href="login.html"><button class="login">já tem uma conta? faça o login</button></a>
+  <a href="index.html"><button class="home">voltar à home</button></a>
+  
+</div>
+</div>
+</body>
+</html>

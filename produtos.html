@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="imagex/png" href="img-logo.ico">
+<title>VISTYLE | Produtos</title>
+<style type="text/css">
+  body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  }
+
+  a{
+  color:white;
+  text-decoration: none;
+  position: relative;
+  }
+
+  @font-face{
+  font-family: 'GoodTiming';
+  src: url('gt.ttf') format('truetype');
+  }
+
+  @font-face{
+  font-family: 'SummerDreams';
+  src: url('sd.ttf') format('truetype');
+  }
+
+  .botaor{
+  display: inline-block;
+  padding: 7px 10px; 
+  border-radius: 50%; 
+  background-color: #558da3;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px; 
+  cursor: pointer;
+  border: none; 
+  outline: none; 
+  margin-left: 470px;
+  }
+
+  .botaor:hover{
+  background-color: #407386;
+  }
+
+  .botaoc{
+  display: inline-block;
+  padding: 10px; 
+  border-radius: 20px;
+  background-color: #558da3;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px; 
+  cursor: pointer;
+  border: none; 
+  outline: none; 
+  margin-left: 1140px; 
+  position: absolute; 
+  font-family: 'GoodTiming', sans-serif;
+  }
+
+  .card{
+  border: 1px solid rgb(255, 255, 255);
+  width: max-content;
+  text-align: center;
+  position: absolute;
+  margin: 10px;
+  }
+
+  .card img{
+  width: 300px;
+  padding: 5px;
+  }
+
+  .title{
+  font-weight: bold;
+  margin: 20px;
+  }
+
+  .cbutton{
+  border: 2px solid;
+  background: #f7a440;
+  color: white;
+  font-weight: bold;
+  margin: 20px;
+  padding: 5px 10px;
+  }
+
+  .cbutton:hover{
+  box-shadow: 0 0 5px 5px #e1701a inset;
+  }
+
+  .cart{
+  width: 250px;
+  position: relative;
+  margin-left: 1080px;
+  margin-top: 100px;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+  overflow-y: scroll;
+  height: 520px;
+  }
+
+  .cartImg img{
+  width: 200px;
+  }
+
+  .title{
+    color: white;
+  }
+
+  .titlec{
+    font-family: 'GoodTiming';
+    color: white;
+  }
+
+  #item1{
+    margin-top: 100px;
+    margin-left: 20px;
+  }
+
+  #item2{
+    margin-top: 100px;
+    margin-left: 360px;
+  }
+
+  #item3{
+    margin-top: 100px;
+    margin-left: 700px;
+  }
+
+  #title{
+    color: white;
+  }
+</style>
+
+<script type="text/javascript">
+var addItemId = 0;
+
+function addToCart(item) {
+    addItemId += 1;
+    var selectedItem = document.createElement('div');
+    selectedItem.classList.add('cartImg');
+    selectedItem.setAttribute('id', addItemId);
+
+    var img = document.createElement('img');
+    img.setAttribute('src', item.children[0].currentSrc);
+
+    var title = document.createElement('div');
+    title.innerText = item.children[1].innerText;
+
+    var label = document.createElement('div');
+    label.innerText = item.children[2].children[0].innerText;
+
+    var select = document.createElement('span');
+    select.innerText = item.children[2].children[1].value;
+    label.append(select);
+
+    var delBtn = document.createElement('button');
+    delBtn.innerText = 'deletar';
+    delBtn.setAttribute('onclick', 'del(' + addItemId + ')');
+
+    var cartItems = document.getElementById('title');
+    selectedItem.append(img);
+    selectedItem.append(title);
+    selectedItem.append(label);
+    selectedItem.append(delBtn);
+    cartItems.append(selectedItem);
+}
+
+function del(item) {
+    document.getElementById(item).remove();
+}
+</script>
+</head>
+
+<body>
+<div style="display: flex; align-items: center;">
+  <img src="img logo.png" style="height: 80px; margin-left: 20px; margin-top: 10px">
+  <img src="logo.png" style="height: 45px; margin-left: -18px; margin-top: 10px;">
+  <nav style="margin-left: 80px; font-size: 24px; font-family: 'GoodTiming', sans-serif; margin-top: 10px;">
+    <a href="index.html">home</a> |
+    <a href="produtos.html">produtos</a> |
+    <a href="sn.html">sobre nós</a>
+    </nav>
+  <button class="botaoc"><a href="signup.html">crie uma conta</a></button>
+  <button class="botaor"><a href="referencias.html"><img src="seta.png" style="height: 30px;"></a></button>
+</div>
+
+<img src="banner1.png" style="width: 1349px; margin-top: 15px">
+
+<h1 style="color: white; position: absolute; margin-left: 20px;">| produtos</h1>
+<div class="card" id="item1">
+    <img src="produtos/pag/1.webp">
+    <div class="title">calça ribbon techwear</div>
+    <div>
+    <label style="color: white;">tamanho: </label>
+    <select>
+        <option>P</option>
+        <option>M</option>
+        <option>G</option>
+        <option>GG</option>
+    </select>
+    </div>
+    <button onclick="addToCart(document.getElementById('item1'))" class="cbutton"> adicionar ao carrinho </button>
+</div>
+
+<div class="card" id="item2">
+    <img src="produtos/pag/2.webp">
+    <div class="title">camiseta cargo khaki</div>
+    <div>
+    <label style="color: white;">tamanho: </label>
+    <select>
+        <option>P</option>
+        <option>M</option>
+        <option>G</option>
+        <option>GG</option>
+    </select>
+    </div>
+    <button onclick="addToCart(document.getElementById('item2'))" class="cbutton"> adicionar ao carrinho </button>
+</div>
+
+<div class="card" id="item3">
+    <img src="produtos/pag/3.webp">
+    <div class="title">máscara de gás cyberpunk</div>
+    <div>
+    <label style="color: white;">tamanho: </label>
+    <select>
+        <option>P</option>
+        <option>M</option>
+        <option>G</option>
+        <option>GG</option>
+    </select>
+    </div>
+    <button onclick="addToCart(document.getElementById('item3'))" class="cbutton"> adicionar ao carrinho </button>
+</div>
+
+<div class="cart" id="cart">
+    <div class="title titlec">CARRINHO</div>
+    <hr/>
+    <div id="title"></div>
+    <br>
+</div>
+<br><br>
+</body>
+</html>
